@@ -1,0 +1,26 @@
+# Ignore build output
+/bin/
+
+# Ignore Eclipse-specific settings folders (but keep .classpath and .project)
+.settings/
+
+# Ignore VSCode settings if using
+.vscode/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore compiled class files if any escape /bin/
+*.class
+
+# Ignore temporary files
+*.tmp
+*.swp
+*~
+
+# Note:
+# lib/, .classpath, .project, README.md, LICENSE — all intentionally **not** ignored and will be tracked.
