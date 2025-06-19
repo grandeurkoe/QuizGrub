@@ -7,6 +7,8 @@
 A sleek and interactive desktop-based quiz application built using Java Swing and MySQL.  
 Built for students and admins alike – take quizzes, track performance with real-time charts, and manage questions effortlessly!
 
+<video src="demo/quizgrub.mp4" controls width="600"></video>
+
 ## 🚀 Features
 
 1. **User Authentication** – Register, login, logout securely.  
