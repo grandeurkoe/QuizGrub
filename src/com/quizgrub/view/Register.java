@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 public class Register extends JFrame {
 	private JTextField userField;
 	private JPasswordField passField;
+	private JPasswordField confirmPassField;
 	private JComboBox<String> roleCombo;
 	private JButton backBtn, registerBtn;
 
@@ -35,6 +36,8 @@ public class Register extends JFrame {
 		userLabel.setFont(labelFont);
 		JLabel passLabel = new JLabel("Password:");
 		passLabel.setFont(labelFont);
+		JLabel passConfirmLabel = new JLabel("Confirm Password:");
+		passConfirmLabel.setFont(labelFont);
 		JLabel rollLabel = new JLabel("Role:");
 		rollLabel.setFont(labelFont);
 
@@ -43,6 +46,9 @@ public class Register extends JFrame {
 
 		passField = new JPasswordField(15);
 		passField.setFont(fieldFont);
+		
+		confirmPassField = new JPasswordField(15);
+		confirmPassField.setFont(fieldFont);
 
 		roleCombo = new JComboBox<String>(new String[] { "student", "admin" });
 		roleCombo.setFont(fieldFont);
@@ -92,9 +98,20 @@ public class Register extends JFrame {
 		gbc.anchor = GridBagConstraints.WEST;
 		gbc.insets = new Insets(10, 10, 0, 0);
 		add(passField, gbc);
-
+		
 		gbc.gridx = 0;
 		gbc.gridy = 3;
+		gbc.anchor = GridBagConstraints.EAST;
+		gbc.insets = new Insets(10, 0, 0, 10);
+		add(passConfirmLabel, gbc);
+
+		gbc.gridx = 1;
+		gbc.anchor = GridBagConstraints.WEST;
+		gbc.insets = new Insets(10, 10, 0, 0);
+		add(confirmPassField, gbc);
+
+		gbc.gridx = 0;
+		gbc.gridy = 4;
 		gbc.anchor = GridBagConstraints.EAST;
 		gbc.insets = new Insets(10, 0, 0, 10);
 		add(rollLabel, gbc);
@@ -105,7 +122,7 @@ public class Register extends JFrame {
 		add(roleCombo, gbc);
 
 		gbc.gridx = 0;
-		gbc.gridy = 4;
+		gbc.gridy = 5;
 		gbc.gridwidth = 2;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		gbc.insets = new Insets(20, 0, 20, 0);
@@ -131,11 +148,17 @@ public class Register extends JFrame {
 	private void handleRegistration() {
 		String username = userField.getText();
 		String password = String.valueOf(passField.getPassword());
+		String confirmPassword = new String(confirmPassField.getPassword()).trim();
 		String role = (String) roleCombo.getSelectedItem();
 
-		if (username.isEmpty() || password.isEmpty()) {
-			JOptionPane.showMessageDialog(this, "Both fields must be filled!", "Validation Error",
+		if (username.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+			JOptionPane.showMessageDialog(this, "All fields are required.", "Validation Error",
 					JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+		
+		if (!password.equals(confirmPassword)) {
+			JOptionPane.showMessageDialog(this, "Passwords do not match.");
 			return;
 		}
 

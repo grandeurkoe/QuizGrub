@@ -51,6 +51,8 @@ public class TakeQuiz extends JFrame {
 		if (!questions.isEmpty()) {
 			displayQuestion(0);
 			startQuizTimer();
+		} else {
+			return;
 		}
 
 		getContentPane().setBackground(Color.WHITE);
