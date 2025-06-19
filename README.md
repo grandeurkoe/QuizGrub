@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="resources/images/quizgrub_logo.png" alt="QuizGrub UI" width="150"/>
+</div>
+
 # QuizGrub
 
 A sleek and interactive desktop-based quiz application built using Java Swing and MySQL.  
@@ -10,8 +14,6 @@ Built for students and admins alike – take quizzes, track performance with rea
 3. **Admin Panel** – Add/edit/delete questions, manage users, view all scores.  
 4. **Data Visualization** – View performance using **JFreeChart**-powered line graphs.  
 5. **CSV Import** – Batch upload questions with ease.
-
-![QuizGrub UI](resources/images/quizgrub_logo.png)
 
 ## 🛠️ Getting Started
 
