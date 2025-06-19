@@ -1,6 +1,6 @@
 -- Create the database
-CREATE DATABASE IF NOT EXISTS quizgrub_db;
-USE quizgrub_db;
+CREATE DATABASE IF NOT EXISTS quizgrub;
+USE quizgrub;
 
 -- Users table (admin + student)
 CREATE TABLE IF NOT EXISTS users (
