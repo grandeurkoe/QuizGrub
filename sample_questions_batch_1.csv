@@ -1,0 +1,11 @@
+question_text,option_a,option_b,option_c,option_d,correct_option,category,difficulty
+"What is the output of 'System.out.println(3 + 4 + ""Quiz"");'",7Quiz,34Quiz,Quiz34,Quiz7,A,Java,Easy
+Which company created Java?,Sun Microsystems,Google,Microsoft,Apple,A,Java,Easy
+Which keyword is used to inherit a class in Java?,implement,extends,inherits,super,B,Java,Easy
+What is the size of int in Java?,4 bytes,2 bytes,8 bytes,Depends on system,A,Java,Medium
+Which collection class allows duplicate elements in Java?,Set,Map,List,HashMap,C,Java,Easy
+What does JVM stand for?,Java Variable Machine,Java Virtual Machine,Java Verified Machine,Java Vendor Machine,B,Java,Easy
+Which operator is used for object comparison in Java?,==,.equals(),!=,===,B,Java,Medium
+What is the default value of a boolean variable in Java?,true,false,null,0,B,Java,Easy
+Which method is the entry point of any Java program?,start(),run(),main(),init(),C,Java,Easy
+Which keyword is used to stop a loop in Java?,exit,stop,break,return,C,Java,Easy
