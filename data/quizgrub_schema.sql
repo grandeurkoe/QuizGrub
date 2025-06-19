@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS questions (
 );
 
 -- Quiz results table
-CREATE TABLE IF NOT EXISTS results (
+CREATE TABLE IF NOT EXISTS scores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     score INT NOT NULL,
